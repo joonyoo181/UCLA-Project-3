@@ -13,21 +13,7 @@ int endingFloor(string elevatorstring);
 int highestFloor(string elevatorstring);
 
 int main() {
-    assert(isValidElevatorString("") == false);
-    assert(isValidElevatorString("    ") == false);
-    assert(doorsOpen("    ") == false);
-    assert(endingPassengers("      ") == -1);
-    assert(mostPassengers("      ") == -1);
-    assert(endingFloor("       ") == -1);
-    assert(highestFloor("       ") == -1);
-    assert(isValidElevatorString("M1O+3-2C"));
-    assert(doorsOpen("M1O+3-2C") == false);
-    assert(endingPassengers("M1O+3-2C") == 1);
-    assert(mostPassengers("M1O+3-2C") == 3);
-    assert(endingFloor("M1O+3-2C") == 1);
-    assert(highestFloor("M1O+3-2C") == 1);
 
-    cout << "All tests succeeded" << endl;
     return 0;
 }
 
@@ -221,7 +207,7 @@ int endingPassengers(string elevatorstring) {
 int mostPassengers(string elevatorstring) {
     string str = elevatorstring;
 
-    int max_ppl = INT_MIN;
+    int max_ppl = -100000;
     int people = 0;
 
     //check if valid string
@@ -249,7 +235,7 @@ int mostPassengers(string elevatorstring) {
         return -1;
     }
 
-    return people;
+    return max_ppl;
 }
 
 int endingFloor(string elevatorstring) {
@@ -281,7 +267,7 @@ int endingFloor(string elevatorstring) {
 int highestFloor(string elevatorstring) {
     string str = elevatorstring;
 
-    int max_floor = INT_MIN;
+    int max_floor = -100000;
     int floor = 0;
 
     //check if valid string
