@@ -14,7 +14,6 @@ int highestFloor(string elevatorstring);
 
 int main() {
 
-
     return 0;
 }
 
